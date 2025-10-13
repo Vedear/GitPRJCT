@@ -1,19 +1,24 @@
 # Конспект занятий
 
+```
+> Со студентами составить навигацию по этому репозиторию средствами Markwodn!
+```
+
 Минимальные требования к студентам
 
 1. Персональный компьютер и аудиогарнитура
 1. **Git** (Git-Bash) [Git-Bash](https://git-scm.com/)
 1. Регистрация в Яндекса или VK
-1. Сервис [gitflic.ru](gitflic.ru)
+1. Сервис [gitflic.ru](gitflic.ru) и [Github](github.com)
 1. Создать публичный репозиторий на [gitflic.ru](gitflic.ru)
 1. **Dia** [Dia](https://ru.wikipedia.org/wiki/Dia)
 1. **VSCode** [VSCode](https://code.visualstudio.com/)
 1. **Termux** (для Андроид) [Termux](https://termux.dev/en/)
 1. Компилятор **gcc** (Для Windows MinGW) [MinGW](https://www.mingw-w64.org/downloads/)
-1. **WSL 2.0** - установит Ubuntu - для БД [WSL 2.0](https://gitflic.ru/project/rurewa/education/blob?file=content%2FProgramming%2Fwsl2.md&commit=f9dc07eb6d93862b751d82c6806a1f860043b785&mode=markdown)
+1. **WSL 2.0** - установить Ubuntu - для БД [WSL 2.0](https://gitflic.ru/project/rurewa/education/blob?file=content%2FProgramming%2Fwsl2.md&commit=f9dc07eb6d93862b751d82c6806a1f860043b785&mode=markdown)
 1. **Virtual Box** - для установки **Alt Образование 11** - для контроллера домена (групповые политики)
 [Virtual Box](https://www.oracle.com/virtualization/virtualbox/)
+[Альт Образование 11](https://download.basealt.ru/pub/distributions/ALTLinux/p11/images/education/x86_64/alt-education-11.0-x86_64.iso)
 
 ### WSL 2.0 для Windows 10 (для работы с БД)
 
@@ -55,6 +60,26 @@
 
 [Загрузить Альт Образование 11](https://download.basealt.ru/pub/distributions/ALTLinux/p11/images/education/x86_64/alt-education-11.0-x86_64.iso)
 
+
+### Настройки VSCode
+
+- Включить машстабирование по Ctrl+WheelMouse
+    - Settings -> Zoom -> Mouse Wheel Zoom
+- Отключить Миникарту в редакторе
+    - Settings -> Editor -› Minimap:
+
+Установка расширений
+
+- LiveServer (FiveServer)
+    - [LiveServer](https://marketplace.visualstudio.com/items?itemName=yandeu.five-server)
+- CodeSnap
+    - [CodeSnap](https://marketplace.visualstudio.com/items?itemName=adpyke.codesnap)
+- Trailing Spaces
+    - [Trailing Spaces](https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces)
+
+Открыть и закрыть встроенный терминал по **Ctrl+~**
+
+
 ### Рекомендуемые навыки и умения
 
 1. "Слепая печать" на стандартной клавиатуре
@@ -66,15 +91,24 @@
 
 #### 1. Запуск Git на персональном компьютере
 
+Проверить утановку Git в Powershell
+```shell
+git --version
+```
+
 Команды представления системе Git
 
 ```shell
 git config --global user.name "Rurewa"
 ```
 
+> где вместо **Rurewa** - ваш username
+
 ```shell
 git config --global user.email "rurewa@mail.ru"
 ```
+
+> где вместо `rurewa@mail.ru` - ваша почта
 
 #### 2. Клонировать удалённый репозиторий на свой компьютер
 
@@ -84,12 +118,7 @@ git clone https://gitflic.ru/project/kizdano/1234.git
 
 #### 3. Открыть папку склонированного репозитория
 
-Представиться системе **Git** - однократно
-
-```git config --global user.email "your@mail.com"``` - почта коммитера
-```git config --global user.name "your name"``` - имя коммитера
-
-#### 4. Проверить статус текущего репозитория
+Проверить статус текущего репозитория
 
 ```shell
 git status
@@ -110,7 +139,6 @@ git add .
 
 #### 8. Закоммитить
 
-
 ```shell
 git commit -m "Some message"
 ```
@@ -119,6 +147,12 @@ git commit -m "Some message"
 
 ```shell
 git push
+```
+
+или, если не получилось с 1-го раза запушить, то:
+
+```shell
+git push -u origin master
 ```
 
 #### 10. Проверить изменения на сайте удалённого репозитория
