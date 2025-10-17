@@ -1,7 +1,17 @@
 # Конспект занятий
 
-```
-> Со студентами составить навигацию по этому репозиторию средствами Markwodn!
+## Навигация по проекту
+
+- [Todo](/Todo.md)
+- [Markdown](/Markdown.md)
+- [Bash](/content/Bash/)
+- [Docker](/content/Docker.md)
+- [Основы проектирования баз данных](/content/Basics_database_design/README.md)
+- [Обеспечение качества функционирования компьютерных систем](/content/Ensuring_quality_computer_systems_functioning/README.md)
+- [Поддержка и тестирование программных модулей](/content/SupportAndtesting_of_software_modules/README.md)
+
+```markdown
+> Со студентами составить навигацию по этому репозиторию средствами Markdown!
 ```
 
 Минимальные требования к студентам
@@ -19,6 +29,7 @@
 1. **Virtual Box** - для установки **Alt Образование 11** - для контроллера домена (групповые политики)
 [Virtual Box](https://www.oracle.com/virtualization/virtualbox/)
 [Альт Образование 11](https://download.basealt.ru/pub/distributions/ALTLinux/p11/images/education/x86_64/alt-education-11.0-x86_64.iso)
+1. Нейросети [DeepSeek](https://chat.deepseek.com/) и [Cursor](https://cursor.com/)
 
 ### WSL 2.0 для Windows 10 (для работы с БД)
 
@@ -53,6 +64,15 @@
     - (Не обязательно!)Если обновления Ubuntu завершаться ошибкой, то надо в **Windows PowerShell** (Администратор) задать версию WSL 2 по умолчанию: `wsl --set-default-version 2`
 
 [Основные команды для WSL](https://learn.microsoft.com/ru-ru/windows/wsl/basic-commands)
+
+### Docker
+
+1. [Загрузить Docker-Desktop](https://www.docker.com/products/docker-desktop/)
+1. Выполнять авторизацию в Docker-Desktop не обязательно, указать personal;
+1. Перезагрузить компьютер;
+1. Запустить Docker Desktop (можно добавить в автозагрузку для удобства);
+1. В Powershell выполнить ```docker images``` для показа установленных образов;
+1. Установить тестовый контейнер ```docker run hello-world```
 
 ### Virtual Box (Для организации контроллера домена)
 
@@ -239,6 +259,8 @@ git log
 
 #### Основные команды bash (командная строка, консоль)
 
+**Bash** - командный интерпритатор и скриптовый язык программирования
+
 Показать текущее расположение
 
 ```pwd```
@@ -264,6 +286,31 @@ git log
 Вернуться в папку пользователя по умолчанию
 
 ```cd ~```
+
+Создать пустой каталог
+```shell
+mkdir emptyDir
+```
+
+Создать пустой тектовый файл
+```shell
+touch emptyFile.txt
+```
+
+Показать тип файла
+```shell
+file enyFile.txt
+```
+
+Показать больше информации о файле
+```shell
+stat file1.txt
+```
+
+Показать все ранее введённые команды:
+```shell
+history
+```
 
 #### Работа с git-ветками
 
