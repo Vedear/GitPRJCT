@@ -4,10 +4,18 @@
 
 ### Лекции
 
-[1. Средства разработки технической документации](/content/SupportAndtesting_of_software_modules/Documentation.md)
+[Средства разработки технической документации](/content/SupportAndtesting_of_software_modules/Documentation.md)
 
-[2. Единая система программной документации (ЕСПД)](/content/SupportAndtesting_of_software_modules/ESPD.md)
+[Единая система программной документации (ЕСПД)](/content/SupportAndtesting_of_software_modules/ESPD.md)
 
-[3. Автоматизация документирования кода](/content/SupportAndtesting_of_software_modules/AutoDocumentation.md)
+[Автоматизация документирования кода](/content/SupportAndtesting_of_software_modules/AutoDocumentation.md)
 
-> Вместе со студентами показать как формируется навигация по репозиторию срдествами Markdown!
+[Основы проектирования баз данных](/content/Basics_database_design/README.md)
+
+[Обеспечение качества функционирования компьютерных систем](/content/Ensuring_quality_computer_systems_functioning/README.md)
+
+[]()
+
+[]()
+
+> Вместе со студентами показать как формируется навигация по репозиторию средствами Markdown!
