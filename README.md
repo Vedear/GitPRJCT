@@ -8,7 +8,7 @@
 - [Docker](/content/Docker.md)
 - [Основы проектирования баз данных](/content/Basics_database_design/README.md)
 - [Обеспечение качества функционирования компьютерных систем](/content/Ensuring_quality_computer_systems_functioning/README.md)
-- [Поддержка и тестирование программных модулей](/content/SupportAndtesting_of_software_modules/README.md)
+- [Поддержка и тестирование программных модулей](/content/SupportAndTesting_of_software_modules/)
 
 [Минимальные технические требования для места разработчика](https://gitflic.ru/project/rurewa/cpp/file?branch=master)
 
@@ -24,10 +24,35 @@
 1. **Termux** (для Андроид) [Termux](https://termux.dev/en/)
 1. Компилятор **gcc** (Для Windows MinGW) [MinGW](https://www.mingw-w64.org/downloads/)
 1. **WSL 2.0** - установить Ubuntu - для БД [WSL 2.0](https://gitflic.ru/project/rurewa/education/blob?file=content%2FProgramming%2Fwsl2.md&commit=f9dc07eb6d93862b751d82c6806a1f860043b785&mode=markdown)
+1. Docker - [Загрузить и установить Docker-Desktop](https://www.docker.com/products/docker-desktop/)
 1. **Virtual Box** - для установки **Alt Образование 11** - для контроллера домена (групповые политики)
 [Virtual Box](https://www.oracle.com/virtualization/virtualbox/)
 [Альт Образование 11](https://download.basealt.ru/pub/distributions/ALTLinux/p11/images/education/x86_64/alt-education-11.0-x86_64.iso)
 1. Нейросети [DeepSeek](https://chat.deepseek.com/) и [Cursor](https://cursor.com/)
+
+### Git
+
+Открыть Powersheell или Git-Bash
+
+Сделать тектовый редактор Nano по умолчанию
+```shell
+git config --global core.editor "nano"
+```
+
+Команды представления системе **Git**
+
+```shell
+git config --global user.name "Rurewa"
+```
+
+> где вместо **Rurewa** - ваш username
+
+```shell
+git config --global user.email "rurewa@mail.ru"
+```
+
+> где вместо `rurewa@mail.ru` - ваша почта
+
 
 ### WSL 2.0 для Windows 10 (для работы с БД)
 
@@ -65,8 +90,8 @@
 
 ### Docker
 
-1. [Загрузить Docker-Desktop](https://www.docker.com/products/docker-desktop/)
-1. Выполнять авторизацию в Docker-Desktop не обязательно, указать personal;
+1. [Загрузить и установить Docker-Desktop](https://www.docker.com/products/docker-desktop/)
+1. Выполнять авторизацию в Docker-Desktop (можно через Google), указать personal;
 1. Перезагрузить компьютер;
 1. Запустить Docker Desktop (можно добавить в автозагрузку для удобства);
 1. В Powershell выполнить ```docker images``` для показа установленных образов;
@@ -82,11 +107,26 @@
 
 [Создание виртуальной машины в Virtual Box 7.0 для установки Альт Образование](https://rutube.ru/video/9f1c18dafa34d0c525bbca95d4002863/)
 
-[Установка Альт Образование 10 без UEFI](https://rutube.ru/video/8e0549a3a10f8881efb4260c77f4973b/)
+[Установка Альт Образование 10/11 без UEFI](https://rutube.ru/video/8e0549a3a10f8881efb4260c77f4973b/)
 
 [Загрузить Альт Образование 11](https://download.basealt.ru/pub/distributions/ALTLinux/p11/images/education/x86_64/alt-education-11.0-x86_64.iso)
 
 После установки **Альт Образование 11** необходимо выполнить:
+
+Обновить ОС
+```shell
+epm ei --auto && epm full-upgrade -y
+```
+
+Установить дополнительные утилиты
+```shell
+epmi --auto newt52 lshw yt-dlp btop htop nvtop apt-repo apt-https NetworkManager-tui eget wget fd git ncdu micro xclip xsel mc tree glxgears glmark2 neofetch fastfetch whois curl inxi net-tools arp-scan aria2 alterator-grub sysctl-conf-userns cmatrix codetest_sl caca-utils asciiquarium
+```
+
+Установить средства разработки
+```shell
+epmi --auto valgrind rpm-build llvm-common-clang-tools clang-devel gcc-c++ cppcheck ghex cmake gdb ascii kdbg
+```
 
 **Обновление ОС:**
 
@@ -119,7 +159,7 @@ fastfetch
 inxi -F
 ```
 
-### Настройки VSCode
+### Минимальные настройки VSCode
 
 - Включить машстабирование по **Ctrl+WheelMouse**
     - **Settings** -> **Zoom** -> **Mouse Wheel Zoom**
@@ -129,7 +169,7 @@ inxi -F
 Установка расширений
 
 - LiveServer (**FiveServer**)
-    - [LiveServer](https://marketplace.visualstudio.com/items?itemName=yandeu.five-server)
+    - [LiveServer(FiveServer)](https://marketplace.visualstudio.com/items?itemName=yandeu.five-server)
 - **CodeSnap**
     - [CodeSnap](https://marketplace.visualstudio.com/items?itemName=adpyke.codesnap)
 - **Trailing Spaces**
@@ -137,12 +177,13 @@ inxi -F
 
 Открыть и закрыть встроенный терминал по **Ctrl+~**
 
+(Подробней о настройках VSCode)[https://gitflic.ru/project/rurewa/education/blob?file=content%2FProgramming%2FVCode.md&commit=b7894efff8eadc1c1fc442028810b950c8d6a432&mode=markdown]
 
 ### Рекомендуемые навыки и умения
 
 1. "Слепая печать" на стандартной клавиатуре
     - [Онлайн-клавиатурный тренажер](https://stamina-online.com/ru/)
-1. Эффективная работа с текстом
+1. Эффективная работа с текстом (важные клавиатурные сокращения)
 1. Технический английский
 1. Читать тематические группы в Телеграм
 1. Git+Markdown
@@ -170,7 +211,7 @@ git config --global core.editor "nano"
 git config --global core.editor "code --wait"
 ```
 
-**Представиться системе Git (выполняется однократно, перед 1-м коммитом)**
+**Представиться системе Git (выполняется однократно, после установки Git или перед 1-м коммитом)**
 
 Команды представления системе **Git**
 
@@ -209,10 +250,33 @@ git status
 git status
 ```
 
+Показать сравнение до и после изменения файлов (до git add)
+```shell
+git diff
+```
+
 #### 7. Подготовить файлы к коммиту (добавить)
 
+добавить все файлы и папки, включая скрытые
 ```shell
 git add .
+```
+
+или все кроме скрытых
+```shell
+git add *
+```
+
+или объединить **git add** с **git commit**
+```shell
+git commit -a
+```
+
+> Откроется текстовый редактор командной сроки, в котором нужно записать текст коммит
+
+Отменить добавленные изменения
+```shell
+git restore --staged README.md
 ```
 
 #### 8. Закоммитить
@@ -251,11 +315,17 @@ git log
 
 > чтобы выйти из списка коммитов, выполните **Q**
 
-Показать разницу каждого коммита
+Показать подробности каждого коммита
 
 ```git log -p```
 
-Показать последний коммит
+или показать подробности нескольких коммитов
+```shell
+git log -p -3
+```
+покажет 3 последних коммита
+
+Показать последний коммит кратко
 
 ```git log --stat -1```
 

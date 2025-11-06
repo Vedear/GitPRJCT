@@ -12,9 +12,7 @@
 
 [Основы проектирования баз данных](/content/Basics_database_design/README.md)
 
-[Обеспечение качества функционирования компьютерных систем](/content/Ensuring_quality_computer_systems_functioning/README.md)
-
-[]()
+[Проверка и отладка программного кода на C++](/content/SupportAndTesting_of_software_modules/Checking_and_debuggingCPPcode.md)
 
 []()
 
