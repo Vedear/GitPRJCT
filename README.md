@@ -2,27 +2,34 @@
 
 ## Навигация по проекту
 
-- [Todo](/Todo.md)
-- [Markdown](/Markdown.md)
-- [Bash](/content/Bash/)
-- [Docker](/content/Docker.md)
+- [Bash](/content/Bash/README.md)
+- [Git](/content/Git/README.md)
+- [Markdown](Markdown.md)
+- [Mermaid](/content/Mermaid/README.md)
+- [Docker](/content/Docker/README.md)
 - [Основы проектирования баз данных](/content/Basics_database_design/README.md)
 - [Обеспечение качества функционирования компьютерных систем](/content/Ensuring_quality_computer_systems_functioning/README.md)
 - [Поддержка и тестирование программных модулей](/content/SupportAndTesting_of_software_modules/)
 
-[Минимальные технические требования для места разработчика](https://gitflic.ru/project/rurewa/cpp/file?branch=master)
+[Минимальные и рекомендуемые технические требования для места разработчика](https://gitflic.ru/project/rurewa/cpp/file?branch=master)
 
-Минимальные требования к студентам
+**Минимальные требования к студентам:**
 
-1. Персональный компьютер и аудиогарнитура. [Минимальные требования](https://gitflic.ru/project/rurewa/cpp/file?branch=master)
+1. Персональный компьютер и аудиогарнитура.
 1. **Git** (Git-Bash) [Git-Bash](https://git-scm.com/)
 1. Регистрация в [Яндекс](https://ya.ru/) или [VK](https://vk.com/)
 1. Сервис [gitflic.ru](gitflic.ru) и [Github](github.com)
 1. Создать публичный репозиторий на [gitflic.ru](gitflic.ru)
 1. **Dia** [Dia](https://ru.wikipedia.org/wiki/Dia)
+1. Установить команду **Tree** в Windows:
+    - [Chocolatey - это основанный на CLI менеджер пакетов для Windows, который чем-то похож на apt-get](https://github.com/chocolatey/choco/releases?ysclid=mh035mg6en297039295)
+    - В Powershell выполнить установку **Tree**:
+    ```powershell
+    choco install tree
+    ```
 1. **VSCode** [VSCode](https://code.visualstudio.com/)
 1. **Termux** (для Андроид) [Termux](https://termux.dev/en/)
-1. Компилятор **gcc** (Для Windows MinGW) [MinGW](https://www.mingw-w64.org/downloads/)
+1. Компилятор **gcc** (Для Windows MSYS2) [Cygwin](https://cygwin.com/) или [MSYS2](https://www.msys2.org/)
 1. **WSL 2.0** - установить Ubuntu - для БД [WSL 2.0](https://gitflic.ru/project/rurewa/education/blob?file=content%2FProgramming%2Fwsl2.md&commit=f9dc07eb6d93862b751d82c6806a1f860043b785&mode=markdown)
 1. Docker - [Загрузить и установить Docker-Desktop](https://www.docker.com/products/docker-desktop/)
 1. **Virtual Box** - для установки **Alt Образование 11** - для контроллера домена (групповые политики)
@@ -97,7 +104,7 @@ git config --global user.email "rurewa@mail.ru"
 1. В Powershell выполнить ```docker images``` для показа установленных образов;
 1. Установить тестовый контейнер ```docker run hello-world```
 
-[Подробный урок по Docker для начинающих](https://gitflic.ru/project/rurewa/altlinux/blob?file=content%2FDocker%2FDocker.md&branch=master&mode=markdown)
+[Уроки по Docker для начинающих](/content/Docker/README.md)
 
 ### Virtual Box (Для организации контроллера домена)
 
@@ -174,6 +181,11 @@ inxi -F
     - [CodeSnap](https://marketplace.visualstudio.com/items?itemName=adpyke.codesnap)
 - **Trailing Spaces**
     - [Trailing Spaces](https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces)
+  **Mermaid**
+- [Markdown Preview Mermaid Support](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid)
+  **Markdown Syntax Highlighting**
+- [Mermaid Markdown Syntax Highlighting](https://marketplace.visualstudio.com/items?itemName=bpruitt-goddard.mermaid-markdown-syntax-highlighting)
+
 
 Открыть и закрыть встроенный терминал по **Ctrl+~**
 
@@ -188,444 +200,10 @@ inxi -F
 1. Читать тематические группы в Телеграм
 1. Git+Markdown
 
-### Git
+## Вопросы к экзамену
 
-#### 1. Запуск Git на персональном компьютере
+[Вопросы к экзамену по дисциплине «ОСНОВЫ ПРОЕКТИРОВАНИЯ БАЗ ДАННЫХ»](/content/Basics_database_design/questions.md)
 
-Проверить установку **Git** в **Powershell**
-```shell
-git --version
-```
+[Вопросы к экзамену по дисциплине «ПОДДЕРЖКА И ТЕСТИРОВАНИЕ ПРОГРАММНЫХ МОДУЛЕЙ»](/content/SupportAndTesting_of_software_modules/questions.md)
 
-Показать справку о Git
-```shell
-git help
-```
-
-**Сменить редактор по умолчанию:**
-
-На **Nano** (проще для новичков):
-
-```shell
-git config --global core.editor "nano"
-```
-
-На **VS Code**:
-
-```shell
-git config --global core.editor "code --wait"
-```
-
-**Представиться системе Git (выполняется однократно, после установки Git или перед 1-м коммитом)**
-
-Команды представления системе **Git**
-
-```shell
-git config --global user.name "Rurewa"
-```
-
-> где вместо **Rurewa** - ваш username
-
-```shell
-git config --global user.email "rurewa@mail.ru"
-```
-
-> где вместо `rurewa@mail.ru` - ваша почта
-
-#### 2. Клонировать удалённый репозиторий на свой компьютер
-
-```shell
-git clone https://gitflic.ru/project/rurewa/mfua
-```
-
-> этой командой будет склонирован на ваш компьютер мой репозиторий.
-
-#### 3. Открыть папку склонированного репозитория
-
-Проверить статус текущего репозитория
-
-```shell
-git status
-```
-#### 5. Внести изменения в текущий репозиторий
-
-#### 6. Проверить изменения
-
-```shell
-git status
-```
-
-Показать сравнение изменения файлов до и после (до git add)
-
-```git diff```
-
-сравнение до ```git commit - m```
-
-```git diff --staged```
-
-> чтобы выйти из списка коммитов, выполните **Q**
-
-> Выйти из режима сравнения, выполните **Q**
-
-Отменить изменения
-```shell
-git restore README.md
-```
-
-#### 7. Подготовить файлы к коммиту (добавить)
-
-добавить все файлы и папки, включая скрытые
-```shell
-git add .
-```
-
-или все кроме скрытых
-```shell
-git add *
-```
-
-```.gitignore``` - файл, который содержит blacklist несохраняемых файлов.
-
-или объединить **git add** с **git commit**
-```shell
-git commit -a
-```
-
-> Откроется текстовый редактор командной сроки, в котором нужно записать текст коммита
-
-Отменить добавленные изменения
-```shell
-git restore --staged README.md
-```
-
-#### 8. Закоммитить (зафиксировать)
-
-```shell
-git commit -m "Some message"
-```
-
-Объединить ```git add``` и ```git commit```:
-```shell
-git commit -a -m 'Update README.md'
-```
-
-Изменение комментария последнего коммита
-
-```git commit --amend```
-
-#### 9. Запушить
-
-```shell
-git push
-```
-
-> Перед ```git push``` желательно выполнить ```git pull```
-
-или сразу обе команды:
-```shell
-git pull && git push
-```
-
-или, если не получилось с 1-го раза запушить, то:
-
-```shell
-git push -u origin master
-```
-
-`-u` создаёт новую ветку, если таковая не существует
-
-где **master** - имя нужной ветки. Вместо **master** может быть **main**
-
-#### 10. Проверить изменения на сайте удалённого репозитория
-
-Перейти на сайт проверяемого репозитория и обновить страницу в браузере **Ctrl-R** либо **F5**
-
-#### 11. Получить изменения из удалённого репозитория
-
-```shell
-git pull
-```
-
-#### Получить список коммитов текущего репозитория
-
-```shell
-git log
-```
-
-> чтобы выйти из списка коммитов, выполните **Q**
-> для перемещения по списку коммитов, жмите стрелки **ВВЕРХ/ВНИЗ** или **Pg Up/Pg Dn** или **Home/End**
-
-Показать подробности каждого коммита
-
-```git log -p```
-
-или показать подробности нескольких коммитов
-```shell
-git log -p -3
-```
-покажет 3 последних коммита
-
-Показать краткую информацию о коммитах
-
-```git log --stat```
-
-> чтобы выйти из списка коммитов, выполните **Q**
-
-Показать последний коммит кратко
-
-```git log --stat -1```
-
-> чтобы выйти из списка коммитов, выполните **Q**
-
-показать несколько последних коммитов -2, -3 etc.
-
-```git log --stat -2```
-
-> чтобы выйти из списка коммитов, выполните **Q**
-
-Показать хеши коммитов
-
-```git log --oneline```
-
-> чтобы выйти из списка коммитов, выполните **Q**
-
-> **Хэш** - это уникальный идентификатор
-
-Переместиться на указанный коммит назад
-```shell
-git checkout 94120de
-```
-
-Вернуться на последний коммит
-```shell
-git checkout master
-```
-
-или вместо **master** укажите **main**
-
-Показать настройки текущего (локального) git-репозитория
-
-```git config --list```
-
-Показать информацию об удалённом репозитории
-
-Показать источники
-```git remote -v```
-
-```git remote show origin```
-
-### Работа с git-ветками
-
-Показать все ветки
-```shell
-git branch
-```
-
-или
-
-```shell
-git branch --all
-```
-
-Создать новую ветку
-```shell
-git branch test
-```
-
-где test - это имя создаваемой ветки
-
-Переключиться на другую ветку
-```shell
-git switch master
-```
-
-или
-
-```shell
-git checkout test
-```
-
-ещё можно создать новую ветку с автоматическим переходом в неё
-```shell
-git checkout -b test
-```
-
-Отправить новую ветку на сервер
-```shell
-git push --set-upstream origin test
-```
-
-где `test` -  имя отправляемой ветки
-
-Слияне веток
-
-Ветку **anybranch** слить с **master**
-
-Переходим в ветку master и выполняем
-```shell
-git merge anybranch
-```
-
-#### Основные команды bash (командная строка, консоль)
-
-**Bash** - командный интерпретатор и скриптовый язык программирования
-
-Показать текущее расположение
-
-```pwd```
-
-Показать содержимое текущего каталога
-
-```ls```
-
-```ls -all``` - включая скрытые файлы и папки
-
-Показать в виде дерева каталогов
-
-```tree```
-
-Переход в указанный каталог
-
-```cd foldername``` - где *foldername* - это имя целевого каталога
-
-Выйти из текущего каталога вверх по иерархии
-
-```cd ..```
-
-Вернуться в папку пользователя по умолчанию
-
-```cd ~```
-
-Создать пустой каталог
-```shell
-mkdir emptyDir
-```
-
-Создать пустой тектовый файл
-```shell
-touch emptyFile.txt
-```
-
-Показать тип файла
-```shell
-file enyFile.txt
-```
-
-Показать больше информации о файле
-```shell
-stat file1.txt
-```
-
-Показать все ранее введённые команды:
-```shell
-history
-```
-
-Показать содержимое текстового файла без его открытия
-```shell
-cat file1.txt
-```
-
-Пролистать большой текст клавишами **ВВЕРХ/ВНИЗ**
-```shell
-cat file1.txt | less
-```
-
-> Выйти из режима `less` по клавише **Q**
-
-Редактирование текстового файла
-```shell
-nano file1.txt
-```
-
-> Сохранить текст по **Ctrl+S**, выйти из nano по **Ctrl+X**
-
-Можно ещё установить тектовый редактор **Micro** и редактировать файлы в нём:
-
-```shell
-apt install micro
-```
-
-Запустить консольный текстовый редактор **Micro** для создания и редактирования текстового файла
-```shell
-micro main.cpp
-```
-
-> Соранить текст по **Ctrl+S**, выйти из редактора по **Ctrl+Q**
-
-Установить команду **tree** в Windows
-
-[Tree](https://github.com/chocolatey/choco/releases?ysclid=mh035mg6en297039295)
-
-```powershell
-choco install tree
-```
-
-#### Работа с git-ветками
-
-Показать локальные ветки
-
-```git branch```
-
-Показать удалённые ветки репозитория
-
-```git branch --all```
-
-Переключиться на указанную ветку
-
-```git checkout test```
-
-Объединить ветки - слияние бранчей
-
-Если нужно выполнить слияние ветки master с test, то
-
-```git merge test```
-
-из ветки *master*
-
-Если нужно выполнить слияние ветки *test* с *master*, то
-
-```git merge master```
-
-из ветки test
-
-#### Зачем нужен Git?
-
-##### Почему не флешка?
-
-1. Флешка - потенциальный разносчик вирусов
-1. Личные данные с флешки случайно могут попать на чужой компьютер
-1. Антивирус ОС может удалить данные с флешки
-1. Флешка может потеряться или сломаться
-
-##### Почему не облако типа Yandex или Google?
-
-1. Облако не контролирует версии данных
-1. Своё облако на чужом компьютере - это риск утечки личных данных
-1. Для работы с облаком на чужом компьтере необходим браузер, а это не безопасно
-1. Нет надёжной фильтрации типов файлов для загрузки и хранения в облаке
-
-##### Премущества Git
-
-1. Трудно потерять свои проекты
-1. Легко отслеживать версии прокта
-1. Легко делиться с другими людьми своими проктами
-1. Легко разрабатывать проекты совместно с другими людьми (в команде)
-1. Git по умолчанию интегрирован во многие популярные средства разработки, т.к. VSCode
-1. В Git можно создавать веб-страницы с описанием своих проектов
-1. Многие Git-сервисы предоставляют возможность автоматизации сборки ваших проектов
-
-##### Основные состояния git-репозитория
-
-1. Инициализирован - ```git status``` - показать состояние текущего репозитория
-2. Подготовлен (добавлены изменения) - ```git add .``` - добавление изменений
-3. Сохранение - ```git commit -m 'Update README.md - fix'``` - сохранение с комментарием
-4. Синхронизация с удалённым репозиторием - ```git push``` - сохранение на облачном сервисе, например `Gitflic.ru`
-
-##### Что можно сохранять в git?
-
-1. Обычно небольшие по объёму файлы,  < 40 mb.
-1. Изображения, документы, mp3, видео
-1. Все файлы с именами латинскими буквами без пробелов
-
-[Мои заметки по базовой работе с Git](https://gitflic.ru/project/rurewa/education/blob?file=content%2FGit%2FREADME.md&branch=master&mode=markdown)
+[Вопросы к экзамену по дисциплине «ОБЕСПЕЧЕНИЕ КАЧЕСТВА ФУНКЦИОНИРОВАНИЯ КОМПЬЮТЕРНЫХ СИСТЕМ»](/content/Ensuring_quality_computer_systems_functioning/questions.md)

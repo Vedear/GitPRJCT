@@ -226,7 +226,7 @@
     ```markdown
     # My Learning Path
 
-    ## 2024 Goals
+    ## 2025 Goals
     - [x] Learn Git and GitHub fundamentals
     - [x] Create first portfolio project
     - [ ] Complete React course
