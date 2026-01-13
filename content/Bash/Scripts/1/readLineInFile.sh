@@ -1,4 +1,5 @@
 #!/bin/bash
+# readLineInFile.sh
 # Чтение файла построчно
 while IFS= read -r line; do
     echo "Строка: $line"

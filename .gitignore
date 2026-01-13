@@ -37,7 +37,9 @@
 *.out
 *.app
 *.bin
-*.dll
 
 # debug information files
 *.dwo
+
+# apps
+*.vscode

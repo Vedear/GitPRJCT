@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# function.sh
 # Определение функции
 приветствие() {
     local name=$1

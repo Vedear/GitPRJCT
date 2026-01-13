@@ -8,7 +8,7 @@
 
 **Crtl-L**
 
-или
+или с очисткой всего лога
 
 ```shell
 clear
@@ -244,6 +244,11 @@ mkdir dir_name
 mkdir folder{1..3}
 ```
 
+Удалить группу файлов по шаблону
+```shell
+rm -r folder{1..5}
+```
+
 Дополнительно: групповое создание структуры каталогов
 
 Создать такую структуру:
@@ -251,15 +256,15 @@ mkdir folder{1..3}
 project/
 ├── css/
 ├── js/
-├── images/
-│   └── icons/
+├── img/
+│   └── ico/
 ├── fonts/
 └── pages/
 ```
 
 одной командой
 ```shell
-mkdir -p project/{css,js,images/icons,fonts,pages}
+mkdir -p project/{css,js,img/ico,fonts,pages}
 ```
 
 Копировать файл в указанную папку
@@ -312,6 +317,11 @@ hostname
 hostname -I
 ```
 
+или
+```shell
+ifconfig
+```
+
 Покать состояние всех сетевых интерфейсов
 ```shell
 ip -c a
@@ -351,3 +361,36 @@ netstat -an
 ```shell
 route
 ```
+
+### Управление компьютером
+
+Перезагрузка
+```shell
+reboot
+```
+
+или
+```shell
+sudo shutdown -r now
+```
+
+или
+```shell
+sudo systemctl reboot
+```
+
+Выключение
+```shell
+poweroff
+```
+
+или
+```shell
+sudo shutdown -p now
+```
+
+или
+```shell
+sudo systemctl poweroff
+```
+

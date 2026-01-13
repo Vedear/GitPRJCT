@@ -2,9 +2,9 @@
 
 ### Задание студентам
 
-- Создать новые публичные репозитории на Github или Gitlab
+- Создать новые публичные репозитории на `Github` или `Gitlab`
 - Язык нового репозитория Markdown, README.md
-- Склонировать себе и открыть в VSCode
+- Склонировать себе и открыть в **VSCode**
 
 Все типы диаграмм:
 
@@ -59,7 +59,7 @@ ext install bpruitt-goddard.mermaid-markdown-syntax-highlighting
 
 ### Примеры втраиваемых в Markdown диаграмм Mermaid
 
-### Как сделать список в Markdown?
+### Как сделать диаграмму связей?
 ```mermaid
 flowchart LR
     A[Вопрос: Как сделать список?] --> B["Ответ: Через `-` или `*`"]
@@ -179,14 +179,6 @@ pie
     "Samsung" : 30
     "Xiaomi" : 15
     "Другие" : 10
-```
-
-```mermaid
-pie title Кол-во
-   "Windows" : 45.6
-   "macOS" : 25.3
-   "Linux" : 15.2
-   "Другие" : 13.9
 ```
 
 ```mermaid
