@@ -4,7 +4,7 @@
 
 - [Подробные уроки по Docker для ничинающих](https://gitflic.ru/project/rurewa/altlinux/blob?file=content%2FDocker%2FDocker.md&branch=master&mode=markdown)
 - [Работа с базой данных внутри контейнера](/content/Basics_database_design/db_base.md)
-- []()
+- [Практическое владение языком SQL](https://sql-ex.ru/)
 
 # Основы проектирования баз данных. Лекция
 

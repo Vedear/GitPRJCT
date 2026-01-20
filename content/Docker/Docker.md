@@ -168,7 +168,7 @@ docker images
 ```
 - Удалить:
 ```shell
-docker rmi hello-world
+docker rmi my-nginx
 ```
 
 ### Docket Compose
