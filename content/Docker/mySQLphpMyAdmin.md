@@ -1,5 +1,17 @@
 ## MySQL + phpMyAdmin
 
+### Процесс создания Docker проекта MySql+phpMyAdmin
+
+1. Создать папку `Dockers` для хранения всех Docker проектов
+1. Открыть папку `Dockers` в VS Code
+1. Создать в папке Dockers папку `mysql-phpmyadmin`
+1. В папке mysql-phpmyadmin средствами VS Code создать пустой файл `docker-compose.yml`
+1. Вставить код в файл `docker-compose.yml`
+1. Войти в папку `mysql-phpmyadmin` с командной строки
+1. Выполнить скрипт инициализации базы данных SQL
+1. Установить и запустить Docker Composer командой: `docker compose up -d`
+1. Если установка и запуск прошли успешно, то войти в браузере по адресу `http://localhost:8081/` в админ-панель **phpMyAdmin**
+
 Создаём папку проекта
 ```shell
 mkdir mysql-phpmyadmin

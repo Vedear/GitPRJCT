@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash - шибэнг
 # main.sh
 # Пример bash скрипта
 echo "Привет, Мир!"
@@ -19,7 +19,7 @@ echo "Сумма $(($num1 + $num2))"
 # отнять, умножить и разделить сделайте самостоятельно
 
 echo "Введите любое натуральное число"
-read number
+read number # Создайние переменной number
 if (( number > 10 )); then
     echo -e "\033[35mВаше чило > 10\033[0m"
 elif (( number == 10 )); then
@@ -27,3 +27,5 @@ elif (( number == 10 )); then
 else
     echo "Ваше число < 10"
 fi
+
+read number # Вызов переменной number (использование)

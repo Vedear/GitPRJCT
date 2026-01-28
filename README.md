@@ -28,6 +28,7 @@
 **Минимальные требования к студентам:**
 
 1. Персональный компьютер и аудиогарнитура.
+1. Приложение [Teams](https://teams.microsoft.com/v2/) или браузер [Edge](https://www.microsoft.com/ru-ru/edge/download?form=MA13FW)
 1. **Git** (Git-Bash) [Git-Bash](https://git-scm.com/)
 1. Регистрация в [Яндекс](https://ya.ru/) или [VK](https://vk.com/)
 1. Сервис [gitflic.ru](gitflic.ru) и [Github](github.com)

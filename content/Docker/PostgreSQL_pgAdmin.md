@@ -1,5 +1,20 @@
 ## Установка и запуск контейнера PostgreSQL+pgAdmin
 
+### Процесс создания Dockers проекта PostgreSQL+pgAdmin
+
+1. В папке Dockers создать файл `create-project.sh`
+1. Вставить код инструкции в `create-project.sh`
+1. Запустить проект командой: `docker compose up -d`
+1. http://localhost:8082/
+1. Создать сервер с параметрами подключения
+    - В pgAdmin создайте сервер с параметрами:
+    - Host: postgres (это имя сервиса в docker-compose.yml)
+    - Port: 5432
+    - Database: mydatabase
+    - Username: myuser
+    - Password: mypassword
+1. Показать таблицы: Servers -> Database -> Schemas -> Tables -> app_users -> Вверху нажать на значёк таблицы
+
 > Осталось разобраться, как работать с БД в pgAdmin!
 
 создайте файл create-project.sh:

@@ -15,3 +15,7 @@
 [Командная  разработка проекта](/content/StudentPracticalsLabs/TeamDevelopment.md)
 
 [Задания по Bash программированию для начинающих](/content/StudentPracticalsLabs/bashScript.md)
+
+- [История появления и развитие технологии Docker](/content/StudentPracticalsLabs/DockerHistory.md)
+
+- [Самостоятельная работа по созданию проекта c README.md + Mermaid](/content/StudentPracticalsLabs/readmeMarkdownMermaid.md)
