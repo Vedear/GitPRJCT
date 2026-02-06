@@ -4,6 +4,7 @@
     - [ ] Загрузка, установка и работа с готовыми образами
 - [ ] Dockerfile
     - [ ] Создание Dockerfile-проектов
+    - [ ] CI/CD
 - [ ] Docker Compose
     - [ ] Создание Docker Compose проектов
 - Создание своих Docker-образов
