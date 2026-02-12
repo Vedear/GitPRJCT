@@ -1,6 +1,7 @@
 ## Моя коллекция готовых Docker-образов из разных хабов
 
 1. [Docket Hub](/content/Docker/ImageLibrary/DockerHub.md)
+1. [Welcome to Docker](/content/Docker/ImageLibrary/WelcomeToDocker.md)
 1. [Adminer (замена phpMyAdmin)](/content/Docker/ImageLibrary/Adminer.md)
 1. [Alt Linux в Docker](/content/Docker/ImageLibrary/AltInDocker.md)
 1. [Статический сайт на Apache](/content/Docker/ImageLibrary/Apache+StaticSite.md)
@@ -13,10 +14,9 @@
 1. [Node.js для JavaScript](/content/Docker/ImageLibrary/Node.jsForJS.md)
 1. [MySQL база данных](/content/Docker/ImageLibrary/MySQL.md)
 1. [MongoDB (NoSQL)](/content/Docker/ImageLibrary/MongoDB.md)
-1. [Portainer (GUI для управления Docker)](/content/Docker/ImageLibrary/PortainerGuiForDocker.md)
+1. [Portainer](/content/Docker/ImageLibrary/Portainer.md)
 1. [HTTP-сервер для раздачи файлов](/content/Docker/ImageLibrary/HTTPserverFiles.md)
 1. [cAdvisor (мониторинг контейнеров)](/content/Docker/ImageLibrary/cAdvisor.md)
 1. [Тест скорости интернета](/content/Docker/ImageLibrary/speedtest.md)
 1. [Временная база данных для тестов](/content/Docker/ImageLibrary/temp_test-db.md)
 1. [Файловый обменник](/content/Docker/ImageLibrary/file-server.md)
-1. []()
