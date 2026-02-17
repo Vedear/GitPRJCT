@@ -1,5 +1,17 @@
 ## Статический сайт на Apache
 
+### Apache со стандартной приветственной страницей контейнера
+
+```shell
+docker run -d --name my-apache -p 8081:80 httpd:alpine
+```
+или
+```shell
+docker run -d --name my-apache -p 8081:80 httpd
+```
+
+### Apache со своей приветственной страницей
+
 Создайте папку с HTML файлом
 ```shell
 mkdir ~/my-site && cd ~/my-site

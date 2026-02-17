@@ -362,3 +362,6 @@ git merge anybranch
 "Чёрный список" файлов (их расширений), которые не нужно сохранять в проекте. Обычно это фременные файлы.
 
 [A collection of .gitignore templates](https://github.com/github/gitignore)
+
+### Внешние ресурсы по Git
+- [Что такое Git для Начинающих _ GitHub за 30 минут _ Git Уроки](https://rutube.ru/video/fb1165ca1e4f06a0079d9f8a58e68f5c/)

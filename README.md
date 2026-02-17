@@ -43,7 +43,7 @@
 1. **VSCode** [VSCode](https://code.visualstudio.com/) или в **PowerShell** - `winget install Microsoft.VisualStudioCode`
 1. **Termux** (для Андроид) [Termux](https://termux.dev/en/)
 1. Компилятор **gcc** (Для Windows MSYS2) [MSYS2](https://www.msys2.org/) или [Clang](https://releases.llvm.org/download.html)  или в **PowerShell** - `winget install LLVM.LLVM` - не обязательно!
-1. **WSL 2.0** - установить Ubuntu - для БД etc. [WSL 2.0](https://gitflic.ru/project/rurewa/education/blob?file=content%2FProgramming%2Fwsl2.md&commit=f9dc07eb6d93862b751d82c6806a1f860043b785&mode=markdown)
+1. **WSL 2.0** - установить Ubuntu - для **Docker** etc. [WSL 2.0 для Windows 10/11](#wsl-20-для-windows-10-для-работы-с-бд)
 1. **Docker** - [Загрузить и установить Docker-Desktop](https://www.docker.com/products/docker-desktop/) или в **PowerShell** - `winget install Docker.DockerDesktop`
 1. **Virtual Box** - для установки **Alt Образование 11** - для контроллера домена (групповые политики) - пока не обязательно!
 [Virtual Box](https://www.oracle.com/virtualization/virtualbox/) или в **PowerShell** - `winget install --id=Oracle.VirtualBox -e`
@@ -51,6 +51,12 @@
 1. Нейросети [DeepSeek](https://chat.deepseek.com/) и [Cursor](https://cursor.com/)
 
 > Периодически следует обновлять все установленные пользователем приложения. Это удобней делать через **PowerShell** командой ` winget upgrade --all`
+
+Кроме этого, с помощью **WinGet** можно одновременно устанавливать сразу несколько выбранных приложени, например так:
+
+```shell
+winget install Microsoft.Teams Git.Git Microsoft.VisualStudioCode LLVM.LLVM
+```
 
 ### Git
 
@@ -91,9 +97,10 @@ git config --global user.email "rosa@mail.ru"
 1. Включение дополнения "Подсистема Windows для Linux"
     - Выполнить `Win + R`, в диалоговом окне ввести `appwiz.cpl` и нажать **Enter**.
     - Программы и компоненты -> Включение и отключение дополнительных компонентов Windows -> поставить флажок в *Подсистема Windows для Linux*
-    - Перезагрузить компьютер
+    - Или выполните в **Windows PowerShell** (Администратор) команду: `Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform`
+    - Перезагрузить компьютер можно командой ``
     - Запустить **Windows PowerShell** (Администратор)
-    - Проверка подсистемы **WSL 2.0** командой `wsl --version`
+    - Проверка подсистемы **WSL 2.0** командой `wsl --version` и `wsl --status`
     - Обновить **WSL 2.0** командой `wsl --update`
     - Установить **WSL 2.**0 `wsl --install`
     - Когда система предложит указать имя пользователя **UNIX**, надо указать `user` и **Enter**
@@ -123,6 +130,7 @@ git config --global user.email "rosa@mail.ru"
 1. Перезагрузить компьютер;
 1. Запустить **Docker Desktop** (можно добавить в автозагрузку для удобства);
 1. Установить и запустить тестовый контейнер `docker run hello-world`
+1. Если `docker run hello-world` не срабатывает, то в Ubuntu выполните `sudo service docker restart`
 
 > Если компьютер не тянет в **WSL 2.0** и **Docker**, то можно ограничется [Codespace](https://github.com/features/codespaces) (но не желательно, т.к. очень ограниченный функционал!)
 
