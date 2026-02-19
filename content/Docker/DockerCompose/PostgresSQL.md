@@ -1,4 +1,4 @@
-#### Контейнер с PostgresSQL
+#### Docker compose конетейнеры с PostgresSQL
 
 > Показать все **docker-compose** проекты:
 > ```shell

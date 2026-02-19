@@ -1,4 +1,4 @@
-## MySQL + phpMyAdmin
+## Docker compose конетейнеры c MySQL + phpMyAdmin
 
 ### Процесс создания Docker проекта MySql+phpMyAdmin
 
