@@ -12,4 +12,3 @@
 - [Самостоятельная работа по созданию проекта c README.md + Mermaid](/content/StudentPracticalsLabs/readmeMarkdownMermaid.md)
 - [Самостоятельная работа по установке и запуску готового образа Apache со стандартной приветственной страницей контейнера](/content/StudentPracticalsLabs/ready_made_docker_image.md)
 - [Скрипт синхронизации репозиториев](/content/StudentPracticalsLabs/scriptSyncRep.md)
-- [Скрипт обновления установленных приложений Windows, Linux и Mac](/content/StudentPracticalsLabs/upgradeAlApps.md)
