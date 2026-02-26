@@ -1,10 +1,8 @@
-## Тест скорости интернета
+## Тест скорости интернета (в РФ может не работать из-за блокировок РКН!)
 
 1. Speedtest в Docker
 ```shell
-docker run --rm networkstatic/speedtest-cli --simple
+docker run -d -p 158:80 --name speedtest-server adolfintel/speedtest
 ```
-2. Или
-```shell
-docker run --rm python:alpine sh -c "pip install speedtest-cli && speedtest-cli --simple"
-```
+
+[Открыть в браузере http://localhost:158/](http://localhost:158/)

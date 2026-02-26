@@ -90,6 +90,19 @@ docker ps -a
 docker images
 ```
 
+Показать работающий Nginx
+
+Способ 1
+```shell
+curl http://localhost/
+```
+
+![Скрин вывода curl](img/curl_nginx.png)
+
+Способ 2 - [открыть http://localhost/ адрес в браузере](http://localhost/)
+
+![Скрин nginx в браузере](img/web_nginx.png)
+
 Если нужно только получить готовый образ, без создания и запуска контейнера, то
 ```shell
 docker pull nginx
@@ -112,6 +125,10 @@ docker restart my-nginx
 ```shell
 docker restart 2e6c42d9b6af
 ```
+Перед удалением нужно остановить указанный контейнер
+```shell
+docker stop my-nginx
+```
 
 Удалить выбранный контейнер по его имени
 ```shell
@@ -120,7 +137,16 @@ docker rm my-nginx
 
 ![Тут нужен скриншот вывода]()
 
-И можно удалить ещё и образ загруженного ранее Nginx:
+Если нужно создать ещё один контейнер из этого образа, то:
+```shell
+docker run -d --name nginx-my -p 81:80 nginx
+```
+
+> изменить имя и порт приложения!
+
+[Открыть в браузере приложение из 2-го контейнера по адресу http://localhost:81/](http://localhost:81/)
+
+И можно удалить ещё и образ загруженного ранее **Nginx**:
 
 Получить id образа
 ```shell
@@ -159,19 +185,6 @@ docker ps -a
 ![Скрин контейнера](img/contaurer.png)
 
 > Из одного образа можно получить несколько контейнеров!
-
-Показать работающий Nginx
-
-Способ 1
-```shell
-curl http://localhost/
-```
-
-![Скрин вывода curl](img/curl_nginx.png)
-
-Способ 2 - [открыть http://localhost/ адрес в браузере](http://localhost/)
-
-![Скрин nginx в браузере](img/web_nginx.png)
 
 ### Управление контейнером
 
