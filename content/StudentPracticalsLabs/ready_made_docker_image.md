@@ -1,50 +1,37 @@
-## Самостоятельная работа по созданию из готовых образвых контейнеров различных приложений
+## Самостоятельная работа по созданию из готовых образов различных контейнеров
+
+> Никогда в разработке не используйте русские имена файлов и каталогов!
+> Никогда в разработке не используйте пробелы и спец.символы в именах файлов и каталогов!
 
 ### Задачи
 
-#### 1. Apache
-- Создать новую отдельную страницу с именем `Apache.md` в имеющемся репозитории, например в папке `myNotes` или в новом репозитории для `Docker` создать соответствующую страницу для описания всех шагов работы с **Docker**-контейнером из готового образа на примере веб-сервера **Apache**
+Основные этапы выполнения задач на примере веб-сервера **Apache**:
+- В вашем репозитории создать новую папку для Docker-проектов и в ней отдельную страницу с именем задачи, например `Apache.md`, например в папке `myNotes` для оформления всех шагов работы с **Docker**-контейнером из готового образа на примере веб-сервера **Apache**
 - Склонировать себе на компьютер, если это новый репозиторий;
-- В командной строке найти и выбрать готовый образ **Apache** с **Debian** на борту (самый 1-й по списку: `docker run -d --name my-apache -p 8081:80 httpd`);
-- Проверить работу приложения **Apache** в контейнере по ссылке `http://localhost:8081` в браузере;
-- Выполнить установку образа **Apache** и запуск контейнера `my-apache`;
+- Выполнить установку образа **Apache** и запуск контейнера;
 - Выполнить и оформить в файле `.md` все этапы по [примеру с Nginx](/content/Docker/ImageLibrary/Nginx.md), подкрепляя каждый этап скриншотами в документе;
 - Прислать преподавателю ссылку на оформленную страницу в удалённом репозитории с выполненным заданием.
+- Опционально можно создать общую страницы README.md со списком всех выполненных заданий.
 
-[Пример руководства по запустку контейнера с Nginx >>](https://github.com/rurewa/edu_dockers/blob/main/content/Nginx.md)
+[Пример полного руководства по запустку контейнера с Nginx >>](https://github.com/rurewa/edu_dockers/blob/main/content/Nginx.md)
 
-#### 2. Welcome to Docker
-
-- Так же как **1-е задание**, но с [Welcome to Docker](/content/Docker/ImageLibrary/WelcomeToDocker.md)
-
-> Внутри контейнера установка приложений типа `htop` отличается от контейнера с **Debian**. Подробности можно узнать у нейросети.
-
-#### 3. cAdvisor
-
-- Так же как **предыдущее**, но с [cAdvisor](/content/Docker/ImageLibrary/cAdvisor.md)
-
-#### 4. Speedtest
-
-- Так же как **предыдущее** задание, но с [speedtest](/content/Docker/ImageLibrary/speedtest.md)
-
-#### 5. Ubuntu
-
-- Так же как **предыдущее** задание, но с [Ubuntu](/content/Docker/ImageLibrary/Ubuntu.md)
-
-#### 6. MySQL
-
-- Так же как **предыдущее** задание, но с [MySQL](/content/Docker/ImageLibrary/MySQL.md)
-
-#### 7. PostgreSQL
-
-- Так же как **предыдущее** задание, но с [PostgreSQL](/content/Docker/ImageLibrary/PostgreSQL.md)
-
-#### 8. Portainer
-
-- Так же как **предыдущее** задание, но с [Portainer](/content/Docker/ImageLibrary/Portainer.md)
-
-#### 9. Python
-
-- Так же как **предыдущее** задание, но с [Python](/content/Docker/ImageLibrary/Python.md)
-
-#### 10.
+1. [Apache](/content/Docker/ImageLibrary/Apache.md)
+1. [Welcome to Docker](/content/Docker/ImageLibrary/WelcomeToDocker.md)
+1. [Portainer](/content/Docker/ImageLibrary/Portainer.md)
+1. [Speedtest](/content/Docker/ImageLibrary/speedtest.md)
+1. [cAdvisor](/content/Docker/ImageLibrary/cAdvisor.md)
+1. [MySQL](/content/Docker/ImageLibrary/MySQL.md)
+1. [PostgreSQL](/content/Docker/ImageLibrary/PostgreSQL.md)
+1. [MongoDB (NoSQL)](/content/Docker/ImageLibrary/MongoDB.md)
+1. [Adminer (замена phpMyAdmin)](/content/Docker/ImageLibrary/Adminer.md)
+1. [Jira](/content/Docker/ImageLibrary/Jira.md)
+1. [Pcb2gcode](/content/Docker/ImageLibrary/Pcb2gcode.md)
+1. [Статический сайт на Apache](/content/Docker/ImageLibrary/Apache+StaticSite.md)
+1. [Ubuntu](/content/Docker/ImageLibrary/Ubuntu.md)
+1. [Metasploitable2 docker](/content/Docker/ImageLibrary/Metasploitable2.md)
+1. [Alt Linux в Docker](/content/Docker/ImageLibrary/AltInDocker.md)
+1. [Python](/content/Docker/ImageLibrary/Python.md)
+1. [Node.js для JavaScript](/content/Docker/ImageLibrary/Node.jsForJS.md)
+1. [База данных Redis](/content/Docker/ImageLibrary/Redis.md)
+1. [HTTP-сервер для раздачи файлов](/content/Docker/ImageLibrary/HTTPserverFiles.md)
+1. [Файловый обменник](/content/Docker/ImageLibrary/file-server.md)

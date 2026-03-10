@@ -1,8 +1,39 @@
 ## Pcb2gcode web application wrapper
 
-Allows users to create projects and add their gerber files to convert them to gcode.
-I use this project to engrave my PCB with my 3D printer equipped with a UV laser installed in the extrusion head.
+Выполните все этапы работы с проектом по примеру с [Nginx](/content/Docker/ImageLibrary/Nginx.md)
 
-The 'gcode position' tab contains a gcode script where the head will move along the PCB borders to help you to place it in the bed.
-The 'gcode back side' tab contains the result of the pcb2gcode work.
-The 'gcode removal' tab contains a gcode script where the head will move anywhere in the board to remove all the remaining resin (last cleaning step).
+> Никогда в разработке не используйте русские имена файлов и каталогов!
+> Никогда в разработке не используйте пробелы и спец.символы в именах файлов и каталогов!
+
+Оболочка для веб-приложения **Pcb2gcode**. Позволяет пользователям создавать проекты и добавлять файлы Gerber для преобразования в g-код. Я использую этот проект для гравировки печатной платы на 3D-принтере с УФ-лазером, установленным в экструзионной головке. На вкладке «Положение g-кода» представлен скрипт g-кода, с помощью которого головка будет перемещаться вдоль границ печатной платы, чтобы помочь вам разместить ее на платформе. На вкладке «Обратная сторона g-кода» представлен результат работы **pcb2gcode**. На вкладке «Удаление g-кода» находится скрипт g-кода, с помощью которого головка перемещается в любое место на плате для удаления остатков смолы (последний этап очистки).
+
+### Создаём папку для данных (если её нет)
+
+#### Для Linux/macOS:
+
+```shell
+mkdir -p ~/insolante_data
+```
+
+#### Для Windows (PowerShell):
+
+Создаём папку (например, C:\insolante_data)
+```shell
+mkdir C:\insolante_data -Force
+```
+
+Загружаем образ, создаём и запускаем контейнер:
+```shell
+docker run --rm -p 8081:5000 -d \
+  -e URL=http://localhost \
+  -e RPORT=8180 \
+  -e DEBUG=false \
+  -v ~/insolante_data:/opt/core/data \
+  ngargaud/insolante
+```
+
+[Открыть проект в браузере http://localhost:8081](http://localhost:8081)
+
+Придумайте простой пароль, например 123 и войдите в админ-панель проекта
+
+[Docker-версия Pcb2gcode](https://hub.docker.com/r/ngargaud/insolante)`
